@@ -1,0 +1,1 @@
+Minha própria extenção do VSCODE!
