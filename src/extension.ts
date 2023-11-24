@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
         // Replace spaces with ""
         const componentName = pascalCaseComponentName.replace(/\s+/g, '');
 
-        const componentContent = `function ${componentName}() {\n\treturn (\n\t\t<div>\n\n\t\t</div>\n\t);\n}\n\nexport default ${componentName};`;
+        const componentContent = `function ${componentName}() {\n\treturn (\n\t\t<>\n\n\t\t</>\n\t);\n}\n\nexport default ${componentName};`;
 
         try {
             const currentDirectory = resource.fsPath;

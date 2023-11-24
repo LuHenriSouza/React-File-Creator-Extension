@@ -5,6 +5,10 @@
   "version": "0.0.1",
   "keywords": ["react","snippet","LuHenriSouza"],
   "author": "LuHenriSouza",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LuHenriSouza/React-File-Creator-Extension.git"
+  },
   "engines": {
     "vscode": "^1.84.0"
   },
