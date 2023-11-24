@@ -2,7 +2,7 @@
   "name": "react-component-generator",
   "displayName": "React Component Generator",
   "description": "A simple extension for create a file already prepared to code react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": ["react","snippet","LuHenriSouza"],
   "author": "LuHenriSouza",
   "repository": {
