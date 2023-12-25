@@ -23,19 +23,19 @@ export function activate(context: vscode.ExtensionContext) {
         // Replace spaces with ""
         const componentName = pascalCaseComponentName.replace(/\s+/g, '');
 
-        const componentContent = `function ${componentName}() {\n\treturn (\n\t\t<>\n\n\t\t</>\n\t);\n}\n\nexport default ${componentName};`;
+        const componentContent = `export const ${componentName}: React.FC = () => {\n\treturn (\n\t\t<>\n\n\t\t</>\n\t);\n};`;
 
         try {
             const currentDirectory = resource.fsPath;
-            const componentPath = path.join(currentDirectory, `${componentName}.jsx`);
+            const componentPath = path.join(currentDirectory, `${componentName}.tsx`);
 
             if (fs.existsSync(componentPath)) {
-                vscode.window.showErrorMessage(`File ${componentName}.jsx already exists`);
+                vscode.window.showErrorMessage(`File ${componentName}.tsx already exists`);
                 return;
             }
 
             fs.writeFileSync(componentPath, componentContent);
-            vscode.window.showInformationMessage(`Component ${componentName}.jsx created successfully`);
+            vscode.window.showInformationMessage(`Component ${componentName}.tsx created successfully`);
         } catch (error: any) {
             vscode.window.showErrorMessage(`Error creating component: ${error.message}`);
         }
